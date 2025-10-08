@@ -1,4 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+@font-face{
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 *{
     background-color: transparent;
     padding: 0;
@@ -43,13 +70,13 @@ header nav ul{
     flex-wrap: wrap;
 }
 .logo{
-    font-size: 3.2rem;
-    margin-left: 0.5rem;
+    font-size: 3.4rem;
     font-weight: 900;
     color: #22333B;
     letter-spacing: 0.04em;
     transition: 0.3s ease;
     cursor: pointer;
+    margin-left: 0.5rem;
 }
 .logo:hover{
     transform: translateY(-2px);
@@ -88,9 +115,6 @@ nav a.active{
     align-items: center;
     gap: 0.5rem;
 }
-.socials-icons a i{
-    font-size: 2rem;
-}
 .socials-icons a{
     transition: transform 0.3s ease;
     border: none;
@@ -99,6 +123,16 @@ nav a.active{
     justify-content: center;
     margin: 0;
     color: #0A0908;
+    border-radius: 0;
+}
+.socials-icons a img{
+    display: block;
+    width: 2.4rem;
+    height: auto;
+    border-radius: 0;
+}
+.socials-icons a.secret img{
+    width: 2.1rem;
 }
 .socials-icons a:hover{
     transform: scale(1.25) translateY(-4px);
@@ -156,6 +190,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 5rem 0 2rem;
 }
 
 .quote p{
@@ -182,8 +218,8 @@ footer{
     border-radius: 1em;
 }
 .arrow{
-    margin-top: 3rem;
     position: absolute;
+    bottom: 0;
     border-left: 5px solid #22333B;
     border-top: 5px solid #22333B;
     transform: rotate(45deg);
@@ -206,10 +242,26 @@ footer{
     header{
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
     }
     nav ul{
         width: 100%;
         margin: 0;
+        justify-content: center;
+    }
+}
+@media (max-width:768px){
+    .logo{
+        margin-left: 0;
+        text-align: center;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    nav li{
+        width: auto;
     }
 }
 @media (max-width:1100px){
@@ -394,6 +446,21 @@ footer{
     }
 
 }
+@media (max-width: 900px){
+    .rozvrh{
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    .rozvrh table{
+        min-width: 760px;
+    }
+    .rozvrh th,
+    .rozvrh td{
+        padding: 0.6rem 0.3rem;
+        font-size: 1rem;
+    }
+}
+
 /* -----------Moj Rozvrh-------------- */
 .rozvrh h2{
     text-align: center;
@@ -511,15 +578,7 @@ footer{
     margin: 1rem;
     text-align: center;
 }
-.crew-content h2::after{
-    content: "";
-    animation: cursor 1.5s infinite;
-}
-@keyframes cursor{
-    to{
-        border-left: 3px solid;
-    }
-}
+
 .crew-content{
     margin: 0;
 }
@@ -551,7 +610,7 @@ footer{
 }
 
 .pin span{
-    width: 20vw;
+    /* width: 20vw; */
     white-space: nowrap;
     position: absolute;
     left: 70%;
