@@ -37,14 +37,14 @@ nav{
 header nav ul{
     display: flex;
     align-items: center;
-    gap: 1.75rem;
+    gap: 1.25rem;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
 }
 .logo{
     font-size: 3.2rem;
-    margin-left: 0;
+    margin-left: 0.5rem;
     font-weight: 900;
     color: #22333B;
     letter-spacing: 0.04em;
@@ -75,7 +75,7 @@ nav a.active{
 }
 .container img{
     float: left;
-    margin-right: 4rem;
+    margin-right: 2rem;
     border-radius: 2rem;
 }
 .container .main-headline{
@@ -236,6 +236,9 @@ footer{
     }
     header{
         margin-bottom: 0;
+    }
+    section{
+        margin: 1.5rem 1rem;
     }
 }
 @media (max-width:426px){
@@ -610,7 +613,7 @@ footer{
         width: 100%;
     }
     .pin span{
-        width: 15vw;
+        /* width: 15vw; */
         left: 70%;
         transform: translate(-50%, 0.8rem);
         white-space: normal;
