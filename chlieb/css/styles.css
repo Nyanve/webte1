@@ -45,15 +45,15 @@ body{
     background-color: #EAE0D5;
     color: #0A0908;
 }
+
 /* Base elements */
 a{
     color: #22333B;
     font-weight: 500;
     margin: 1rem;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; 
     transition: 0.3s ease;
 }
-
 p{
     max-width: 100%;
     margin-bottom: 1.3rem;
@@ -66,11 +66,12 @@ section h2{
     font-size: 4rem;
     color: #0A0908;
 }
+
 /* Layout: Header & Navigation */
 header{
     display: flex;
-    justify-content: space-between;
-    margin: 1rem 2rem;
+    justify-content: space-between; 
+    margin: 1rem 2rem; 
     color: #22333B;
 }
 nav{
@@ -89,7 +90,7 @@ header nav ul{
     gap: 1.25rem;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; 
 }
 .logo{
     font-size: 3.4rem;
@@ -97,11 +98,11 @@ header nav ul{
     color: #22333B;
     letter-spacing: 0.04em;
     transition: 0.3s ease;
-    cursor: pointer;
+    cursor: pointer; 
     margin-left: 0.5rem;
 }
 .logo:hover{
-    transform: translateY(-2px);
+    transform: translateY(-2px); 
     color: #C6AC8F;
 }
 header a{
@@ -109,7 +110,7 @@ header a{
 }
 nav a{
     color: #22333B;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; /* Invisible border to prevent layout shift */
 }
 nav a:hover,
 nav a:focus,
@@ -117,7 +118,6 @@ nav a.active{
     color: #5E503F;
     border-bottom: 3px solid #5E503F;
 }
-/* Hero Section */
 .container img{
     float: left;
     margin-right: 2rem;
@@ -125,39 +125,41 @@ nav a.active{
 }
 .container .main-headline{
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    align-items: center; 
+    gap: 2rem; 
 }
-/* Social Icons */
+
+/* Social */
 .socials-icons{
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 .socials-icons a{
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
     border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-flex; /* Use inline-flex to center the image properly */
+    align-items: center; 
+    justify-content: center;  
     margin: 0;
     color: #0A0908;
     border-radius: 0;
 }
 .socials-icons a img{
-    display: block;
+    display: block;  /* Remove extra space below image */
     width: 2.4rem;
-    height: auto;
-    border-radius: 0;
+    height: auto; 
+    border-radius: 0; 
 }
 .socials-icons a.secret img{
-    width: 2.1rem;
+    width: 2.1rem; 
 }
 .socials-icons a:hover{
     transform: scale(1.25) translateY(-4px);
     color: #5E503F;
 }
-/* Lists & Cards */
+
+/* lists */
 .fav-foods{
     display: flex;
     flex-direction: column;
@@ -177,10 +179,9 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    padding: 5rem 0 2rem;
+    position: relative; /* Positioning context for absolute elements */
+    padding: 5rem 0 2rem; 
 }
-
 .quote p{
     text-align: center;
     color: #0A0908;
@@ -209,17 +210,16 @@ footer{
     bottom: 0;
     border-left: 5px solid #22333B;
     border-top: 5px solid #22333B;
-    transform: rotate(45deg);
+    transform: rotate(45deg); /* Rotate to create arrow shape */
     height: 2rem;
     width: 2rem;
-    /* transition: 0.4 ease; */
 }
-
 .arrow:hover{
     border-left-color: #5E503F;
     border-top-color: #5E503F;
 }
-/* Responsive adjustments */
+
+/* responsivity */
 @media (max-width:1327px){
     .container .main-headline{
         flex-direction: column;
@@ -261,10 +261,9 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
     }
 }
-
 @media (max-width:768px){
     .container img{
         width: 100%;
@@ -295,6 +294,13 @@ footer{
 }
 
 /* zivotopis */
+.zivotopis-title{
+    font-size: 2.8rem;
+    color: #0A0908;
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto 1.5rem;
+}
 .zivotopis-section{
     display: flex;
     align-items: stretch;
@@ -366,7 +372,6 @@ footer{
 .width-change{
     width: 75%;
 }
-
 .main-text h3{
     color: #C6AC8F;
     margin: 0.4rem 0;
@@ -375,7 +380,7 @@ footer{
     font-size: 1.6rem;
 }
 .right-text h3{
-        margin-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 .main-text p{
     margin: 0;
@@ -392,7 +397,7 @@ footer{
     nav{
         flex: 1;
     }
-    }
+}
 @media (max-width:1070px){
     .zivotopis-section{
         flex-direction: column;
@@ -558,7 +563,6 @@ footer{
     margin: 1rem;
     text-align: center;
 }
-
 .crew-content{
     margin: 0;
 }
@@ -575,7 +579,6 @@ footer{
     transform: scale(1.4);
     opacity: 1;
 }
-
 .pin::before{
     content: '';
     background: #EAE0D5;
@@ -588,7 +591,6 @@ footer{
     height: 100%;
     border-radius: 50%;
 }
-
 .pin span{
     white-space: nowrap;
     position: absolute;
@@ -605,7 +607,6 @@ footer{
 .gray-bg{
     background-color: #22333B;
 }
-
 .float-window p{
     text-align: center;
     font-size: 1.1vw;
@@ -614,7 +615,6 @@ footer{
 .float-window{
     font-size: 1rem;
 }
-
 .window-text{
     font-size: 0.8em;
 }
@@ -636,7 +636,6 @@ footer{
     top: 53%;
     left: 34%;
 }
-
 .matus{
     top: 51%;
     left: 74%;
@@ -645,7 +644,6 @@ footer{
     top: 47%;
     left: 68.5%;
 }
-
 @media (max-width: 768px){
     .moja-crew img{
         width: 100%;
